@@ -1,0 +1,21 @@
+.authLinks {
+    position: absolute;
+    right: 0;
+}
+
+.authBox {
+    float: left;
+    margin-top: 60px;
+}
+
+.navLink {
+    color: grey;
+    font-weight: bold;
+    font-family: Arial;
+    margin-left: 30px;
+    font-size: 18px;
+}
+
+.active {
+    border-bottom: grey 3px solid;
+}
