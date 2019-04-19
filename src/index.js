@@ -4,11 +4,22 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter} from "react-router-dom";
+import authReducer from './store/Auth/authReducer'
+import {createStore} from "redux"
+import {Provider} from 'react-redux'
+import axios from 'axios'
+
+axios.defaults.headers.common['Authorization'] = `Bearer ` + localStorage.getItem('token');
+
+const store = createStore(authReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+
 
 const app = (
+  <Provider store={store}>
     <BrowserRouter>
       <App/>
     </BrowserRouter>
+  </Provider>
 );
 
 ReactDOM.render(app, document.getElementById('root'));

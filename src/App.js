@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import classes from './App.css';
 import Navigation from './layouts/Navigation/Navigation'
 import {Switch, Route, Redirect} from "react-router"
-import AllGalleries from './views/AllGalleries'
-import MyGalleries from './views/MyGalleries'
-import NewGallery from './views/NewGallery'
-import Login from './views/Login'
-import Register from './views/Register'
+import AllGalleries from './views/AllGalleries/AllGalleries'
+import MyGalleries from './views/MyGalleries/MyGalleries'
+import NewGallery from './views/NewGallery/NewGallery'
+import Login from './views/Login/Login'
+import Register from './views/Register/Register'
 
 class App extends Component {
   render() {
