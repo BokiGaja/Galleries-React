@@ -28,7 +28,7 @@ const authLinks = props => {
         </div>
         :
         <div className={classes.authBox}>
-          <button className="btn btn-outline-info btn-rounded waves-effect" onClick={logout}>Logout</button>
+          <button className="btn btn-outline-info btn-rounded waves-effect" onClick={logout}>Logout ({props.userName})</button>
         </div>
       }
     </div>
@@ -39,7 +39,8 @@ const authLinks = props => {
 const mapStateToProps = state => {
   return {
     loggedIn: state.loggedIn,
-    token: state.token
+    token: state.token,
+    userName: state.userName
   }
 };
 

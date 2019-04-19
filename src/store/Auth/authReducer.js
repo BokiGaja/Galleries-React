@@ -2,7 +2,8 @@ import * as actionTypes from './authActions'
 
 let initialState = {
   loggedIn: localStorage.getItem('token') !== null,
-  token: localStorage.getItem('token') ? localStorage.getItem('token') : null
+  token: localStorage.getItem('token') ? localStorage.getItem('token') : null,
+  userName: localStorage.getItem('userName')
 };
 
 const authReducer = (state = initialState, action) => {
@@ -11,7 +12,8 @@ const authReducer = (state = initialState, action) => {
       return {
         ...state,
         loggedIn: true,
-        token: action.token
+        token: action.token,
+        userName: action.first_name
       };
     case actionTypes.LOGOUT:
       return {
