@@ -3,7 +3,7 @@ import {withRouter} from "react-router"
 import classes from './Register.css'
 
 import {authService} from "../../services/AuthService";
-import * as actions from "../../store/Auth/authActions";
+import * as actions from "../../store/Auth/authActionTypes";
 import {connect} from "react-redux";
 
 const register = props => {

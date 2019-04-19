@@ -4,7 +4,7 @@ import {authService} from "../../services/AuthService";
 import {withRouter} from "react-router";
 import {connect} from "react-redux";
 
-import * as actions from '../../store/Auth/authActions'
+import * as actions from '../../store/Auth/authActionTypes'
 
 
 const login = props => {
@@ -23,7 +23,7 @@ const login = props => {
       const response = await authService.login(credentials);
       if (response.access_token) {
         localStorage.setItem('token', response.access_token);
-        props.onLoginHandler(response.access_token);
+        props.onLoginHandler(response.access_token, response.user.first_name);
         props.history.push('/allGalleries')
       }
       if (response.error) {
@@ -58,7 +58,7 @@ const login = props => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    onLoginHandler: token => dispatch({type: actions.LOGIN, token: token})
+    onLoginHandler: (token, firstName) => dispatch({type: actions.LOGIN, token: token, first_name: firstName})
   }
 };
 

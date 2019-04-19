@@ -4,14 +4,21 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter} from "react-router-dom";
-import authReducer from './store/Auth/authReducer'
 import {createStore} from "redux"
 import {Provider} from 'react-redux'
 import axios from 'axios'
+import {combineReducers, compose, applyMiddleware} from "redux";
+import thunk from 'redux-thunk'
+
+import authReducer from './store/Auth/authReducer'
+import galleryReducer from './store/Gallery/galleryReducer'
+
 
 axios.defaults.headers.common['Authorization'] = `Bearer ` + localStorage.getItem('token');
 
-const store = createStore(authReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+const rootReducer = combineReducers({auth: authReducer, gallery: galleryReducer});
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)));
 
 
 const app = (

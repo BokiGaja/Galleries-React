@@ -1,9 +1,33 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+import {connect} from "react-redux";
+import * as actions from '../../store/Gallery/indexActions'
+import ListGalleries from '../../components/DisplayGalleries/ListGalleries/ListGalleries'
 
-const allGalleries = () => (
-  <div>
-    <h1>AllGalleries</h1>
-  </div>
-);
+const allGalleries = props => {
+  useEffect(() => {
+    async function fetchGalleries() {
+      await props.onFetchGalleries();
+    }
+    fetchGalleries();
+  }, []);
 
-export default allGalleries;
+  return (
+    <div>
+      <ListGalleries galleries={props.galleries}/>
+    </div>
+  )
+};
+
+const mapStateToProps = state => {
+  return {
+    galleries: state.gallery.galleries
+  }
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    onFetchGalleries: () => dispatch(actions.initGalleries())
+  }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(allGalleries);

@@ -5,7 +5,7 @@ import {connect} from "react-redux";
 import {withRouter} from "react-router-dom";
 
 import {authService} from "../../../services/AuthService";
-import * as actions from '../../../store/Auth/authActions'
+import * as actions from '../../../store/Auth/authActionTypes'
 
 const authLinks = props => {
   const logout = async () => {
@@ -38,9 +38,9 @@ const authLinks = props => {
 
 const mapStateToProps = state => {
   return {
-    loggedIn: state.loggedIn,
-    token: state.token,
-    userName: state.userName
+    loggedIn: state.auth.loggedIn,
+    token: state.auth.token,
+    userName: state.auth.userName
   }
 };
 

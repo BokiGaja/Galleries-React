@@ -1,4 +1,4 @@
-import * as actionTypes from './authActions'
+import * as actionTypes from './authActionTypes'
 
 let initialState = {
   loggedIn: localStorage.getItem('token') !== null,

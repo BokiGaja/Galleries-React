@@ -1,0 +1,1 @@
+export {initGalleries} from './galleryActions'
