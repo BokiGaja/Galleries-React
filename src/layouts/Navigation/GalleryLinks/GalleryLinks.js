@@ -10,7 +10,7 @@ const galleryLinks = () => (
       <NavLink activeClassName={classes.active} className={['nav-link', classes.navLink].join(' ')} to="/" exact>All Galleries</NavLink>
     </div>
     <div className={classes.navBox}>
-      <NavLink activeClassName={classes.active} className={['nav-link', classes.navLink].join(' ')} to="/my-galleries">My Galleries</NavLink>
+      <NavLink activeClassName={classes.active} className={['nav-link', classes.navLink].join(' ')} to="/myGalleries">My Galleries</NavLink>
     </div>
     <div className={classes.navBox}>
       <NavLink activeClassName={classes.active} className={['nav-link', classes.navLink].join(' ')} to="/create">Create New Gallery</NavLink>
