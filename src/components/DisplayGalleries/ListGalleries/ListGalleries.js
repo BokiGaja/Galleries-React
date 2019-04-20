@@ -13,20 +13,21 @@ export const listGalleries = props => {
         props.galleries.slice(0, listedGalleries).map(gallery => (
           <GalleryListCard gallery={gallery} key={gallery.id}/>
         ))}
-      {
-        props.galleries.length > currPage * 10 ?
-          <button className={['btn btn-info btn-lg', classes.showMoreButton].join(' ')} onClick={changeCurrPage(currPage+1)}>
-            Load more</button>
-          : null
-      }
-      {
-        props.galleries.length === 0 ?
-          <div className="alert alert-danger" style={{textAlign: 'center'}}>There is no
-            gallery
-          </div>
-          :
-          null
-      }
+
+      {/*{*/}
+      {/*  props.galleries.length > currPage * 10 ?*/}
+      {/*    <button className={['btn btn-info btn-lg', classes.showMoreButton].join(' ')} onClick={changeCurrPage(currPage+1)}>*/}
+      {/*      Load more</button>*/}
+      {/*    : null*/}
+      {/*}*/}
+      {/*{*/}
+      {/*  props.galleries.length === 0 ?*/}
+      {/*    <div className="alert alert-danger" style={{textAlign: 'center'}}>There is no*/}
+      {/*      gallery*/}
+      {/*    </div>*/}
+      {/*    :*/}
+      {/*    null*/}
+      {/*}*/}
       </div>
     </div>
   )
