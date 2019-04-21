@@ -8,6 +8,13 @@ export const setGalleries = galleries => {
   }
 };
 
+export const setSingleGallery = gallery => {
+  return {
+    type: actionTypes.SET_SINGLE_GALLERY,
+    gallery: gallery
+  }
+}
+
 export const initGalleries = () => {
   return dispatch => {
     galleryService.getAll()
@@ -23,3 +30,12 @@ export const fetchUserGalleries = (id) => {
       .catch(error => error)
   }
 };
+
+export const fetchSingleGallery = (id) => {
+  return dispatch => {
+    galleryService.getOne(id)
+      .then(res => dispatch(setSingleGallery(res.data)))
+      .catch(error => error)
+  }
+};
+

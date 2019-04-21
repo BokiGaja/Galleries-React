@@ -15,7 +15,7 @@ const galleryListCard = props => {
     }}>
       <div className="text-white text-center d-flex flex-column align-items-center rgba-black-strong py-5 px-5">
         <h3 className="card-title text-center">{props.gallery.title}</h3>
-        <p style={{fontStyle: 'italic'}} onClick={seeAuthorsGalleries} style={{cursor: 'pointer'}}>
+        <p style={{fontStyle: 'italic', cursor: 'pointer'}} onClick={seeAuthorsGalleries}>
           Created by: {props.gallery.user.first_name} {props.gallery.user.last_name}
           <br/>
           {props.gallery.created_at}

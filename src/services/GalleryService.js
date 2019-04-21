@@ -4,10 +4,6 @@ const gallery = axios.create({
   baseURL: 'http://localhost:8000/api/auth/gallery'
 });
 
-const user = axios.create({
-  baseURL: 'http://localhost:8000/api/auth/user'
-});
-
 class GalleryService {
   async getAll() {
     return gallery.get();

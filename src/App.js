@@ -7,6 +7,7 @@ import MyGalleries from './views/MyGalleries/MyGalleries'
 import NewGallery from './views/NewGallery/NewGallery'
 import Login from './views/Login/Login'
 import Register from './views/Register/Register'
+import SingleGallery from './views/SingleGallery/SingleGallery'
 
 class App extends Component {
   render() {
@@ -15,6 +16,7 @@ class App extends Component {
         <Navigation/>
         <Switch>
           <Route key="authors" path="/authors/:id" component={MyGalleries}/>
+          <Route path="/galleries/:id" component={SingleGallery}/>
           <Route key="user" path="/myGalleries" component={MyGalleries}/>
           <Route path="/allGalleries" component={AllGalleries} exact/>
           <Route path="/create" component={NewGallery}/>

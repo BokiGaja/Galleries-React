@@ -3,6 +3,7 @@ import * as actionTypes from './galleryActionsTypes'
 let initialState = {
   galleries: [],
   originalGalleries: [],
+  singleGallery: null
 };
 
 const selectedReducer = (state = initialState, action) => {
@@ -12,6 +13,11 @@ const selectedReducer = (state = initialState, action) => {
         ...state,
         galleries: action.galleries
       };
+    case actionTypes.SET_SINGLE_GALLERY:
+      return {
+        ...state,
+        singleGallery: action.gallery
+      }
     default:
       return state;
   }
