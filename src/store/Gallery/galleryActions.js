@@ -15,3 +15,11 @@ export const initGalleries = () => {
       .catch(error => error);
   }
 };
+
+export const fetchUserGalleries = (id) => {
+  return dispatch => {
+    galleryService.getAll(id)
+      .then(res => dispatch(setGalleries(res.data.filter(gallery => gallery.user_id == id))))
+      .catch(error => error)
+  }
+};

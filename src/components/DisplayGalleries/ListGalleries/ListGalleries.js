@@ -15,9 +15,9 @@ export const listGalleries = props => {
       <div className={classes.wrapper}>
         {
           props.galleries.slice(0, listedGalleries).map(gallery => (
-            <GalleryListCard gallery={gallery} key={gallery.id}/>
+              <GalleryListCard gallery={gallery} key={gallery.id}/>
           ))}
-
+      </div>
         {
           props.galleries.length > currPage * 10 &&
           <button className={['btn btn-info btn-lg', classes.showMoreButton].join(' ')}
@@ -31,7 +31,6 @@ export const listGalleries = props => {
             gallery
           </div>
         }
-      </div>
     </div>
   )
 };

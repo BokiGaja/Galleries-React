@@ -3,7 +3,8 @@ import * as actionTypes from './authActionTypes'
 let initialState = {
   loggedIn: localStorage.getItem('token') !== null,
   token: localStorage.getItem('token') ? localStorage.getItem('token') : null,
-  userName: localStorage.getItem('userName')
+  userName: localStorage.getItem('userName'),
+  userId: localStorage.getItem('userId')
 };
 
 const authReducer = (state = initialState, action) => {
@@ -13,13 +14,16 @@ const authReducer = (state = initialState, action) => {
         ...state,
         loggedIn: true,
         token: action.token,
-        userName: action.first_name
+        userName: action.first_name,
+        userId: action.userId
       };
     case actionTypes.LOGOUT:
       return {
         ...state,
         loggedIn: false,
-        token: null
+        token: null,
+        userName: null,
+        userId: null
       };
     default:
       return state

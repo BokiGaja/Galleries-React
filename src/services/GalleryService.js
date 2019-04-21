@@ -17,10 +17,6 @@ class GalleryService {
     return gallery.get('/' + id);
   }
 
-  async getUsersGalleries(id) {
-    return user.get('/' + id)
-  }
-
   async createGallery(credentials) {
     try {
       await gallery.post('', credentials);

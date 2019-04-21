@@ -23,7 +23,7 @@ const login = props => {
       const response = await authService.login(credentials);
       if (response.access_token) {
         localStorage.setItem('token', response.access_token);
-        props.onLoginHandler(response.access_token, response.user.first_name);
+        props.onLoginHandler(response.access_token, response.user.first_name, response.user.id);
         props.history.push('/allGalleries')
       }
       if (response.error) {
@@ -58,7 +58,7 @@ const login = props => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    onLoginHandler: (token, firstName) => dispatch({type: actions.LOGIN, token: token, first_name: firstName})
+    onLoginHandler: (token, firstName, id) => dispatch({type: actions.LOGIN, token: token, first_name: firstName, userId: id})
   }
 };
 

@@ -12,8 +12,10 @@ const allGalleries = props => {
   }, []);
 
   return (
-    <div>
-      <ListGalleries galleries={props.galleries}/>
+    <div className="home">
+      <div>
+        <ListGalleries galleries={props.galleries}/>
+      </div>
     </div>
   )
 };

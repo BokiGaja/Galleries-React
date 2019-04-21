@@ -14,8 +14,9 @@ class App extends Component {
       <div className={classes.App}>
         <Navigation/>
         <Switch>
-          <Route path="/allGalleries" component={AllGalleries}/>
-          <Route path="/myGalleries" component={MyGalleries}/>
+          <Route key="authors" path="/authors/:id" component={MyGalleries}/>
+          <Route key="user" path="/myGalleries" component={MyGalleries}/>
+          <Route path="/allGalleries" component={AllGalleries} exact/>
           <Route path="/create" component={NewGallery}/>
           <Route path="/login" component={Login}/>
           <Route path="/register" component={Register}/>

@@ -2,9 +2,7 @@ import * as actionTypes from './galleryActionsTypes'
 
 let initialState = {
   galleries: [],
-  authorsGalleries: [],
   originalGalleries: [],
-  originalAuthorsGalleries: []
 };
 
 const selectedReducer = (state = initialState, action) => {
@@ -13,7 +11,7 @@ const selectedReducer = (state = initialState, action) => {
       return {
         ...state,
         galleries: action.galleries
-      }
+      };
     default:
       return state;
   }
