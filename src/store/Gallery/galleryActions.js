@@ -22,6 +22,13 @@ export const addNewGallery = gallery => {
   }
 };
 
+export const searchGallery = params => {
+  return {
+    type: actionTypes.SEARCH_GALLERY,
+    params: params
+  }
+};
+
 export const initGalleries = () => {
   return dispatch => {
     galleryService.getAll()

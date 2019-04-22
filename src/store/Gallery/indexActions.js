@@ -1,1 +1,1 @@
-export {initGalleries, fetchUserGalleries, fetchSingleGallery, addNewGallery} from './galleryActions'
+export {initGalleries, fetchUserGalleries, fetchSingleGallery, addNewGallery, searchGallery} from './galleryActions'

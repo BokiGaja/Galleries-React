@@ -2,6 +2,7 @@ import React, {useEffect} from 'react'
 import {connect} from "react-redux";
 import * as actions from '../../store/Gallery/indexActions'
 import ListGalleries from '../../components/DisplayGalleries/ListGalleries/ListGalleries'
+import Search from '../../components/Search/Search'
 
 const allGalleries = props => {
   useEffect(() => {
@@ -14,6 +15,7 @@ const allGalleries = props => {
 
   return (
     <div className="home">
+      <Search/>
       <div>
         <ListGalleries galleries={props.galleries}/>
       </div>

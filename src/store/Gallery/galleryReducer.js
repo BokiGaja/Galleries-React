@@ -25,6 +25,13 @@ const selectedReducer = (state = initialState, action) => {
         galleries: [...state.galleries, action.gallery],
         originalGalleries: [...state.galleries, action.gallery]
       };
+    case actionTypes.SEARCH_GALLERY:
+      return {
+        ...state,
+        galleries: action.params.length > 0 ? state.originalGalleries.filter(gallery => gallery.title.includes(action.params) ||
+          gallery.user.first_name.includes(action.params) || gallery.user.last_name.includes(action.params) || gallery.description.includes(action.params) )
+          : state.originalGalleries
+      };
     default:
       return state;
   }
