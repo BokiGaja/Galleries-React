@@ -30,10 +30,8 @@ export const searchGallery = params => {
 };
 
 export const initGalleries = () => {
-  return dispatch => {
-    galleryService.getAll()
-      .then(res => dispatch(setGalleries(res.data)))
-      .catch(error => error);
+  return {
+    type: actionTypes.INIT_GALLERIES
   }
 };
 

@@ -8,6 +8,8 @@ import {Provider} from 'react-redux'
 import axios from 'axios'
 import {combineReducers, compose, applyMiddleware} from "redux";
 import thunk from 'redux-thunk'
+import createSagaMiddleware from 'redux-saga'
+import {watchGallery} from "./sagas";
 
 import App from './App';
 import authReducer from './store/Auth/authReducer'
@@ -16,10 +18,13 @@ import galleryReducer from './store/Gallery/galleryReducer'
 
 axios.defaults.headers.common['Authorization'] = `Bearer ` + localStorage.getItem('token');
 
+const sagaMiddleware = createSagaMiddleware();
+
 const rootReducer = combineReducers({auth: authReducer, gallery: galleryReducer});
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)));
+const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk, sagaMiddleware)));
 
+sagaMiddleware.run(watchGallery);
 
 const app = (
   <Provider store={store}>
