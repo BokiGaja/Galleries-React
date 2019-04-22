@@ -13,7 +13,14 @@ export const setSingleGallery = gallery => {
     type: actionTypes.SET_SINGLE_GALLERY,
     gallery: gallery
   }
-}
+};
+
+export const addNewGallery = gallery => {
+  return {
+    type: actionTypes.ADD_NEW_GALLERY,
+    gallery: gallery
+  }
+};
 
 export const initGalleries = () => {
   return dispatch => {
@@ -38,4 +45,3 @@ export const fetchSingleGallery = (id) => {
       .catch(error => error)
   }
 };
-

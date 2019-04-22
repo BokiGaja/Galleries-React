@@ -14,19 +14,11 @@ class GalleryService {
   }
 
   async createGallery(credentials) {
-    try {
-      await gallery.post('', credentials);
-    } catch (e) {
-      return e.response.data;
-    }
+    return gallery.post('', credentials)
   }
 
   async editGallery(id, credentials) {
-    try {
-      await gallery.patch('/' + id, credentials);
-    } catch (e) {
-      return e.response.data;
-    }
+    return gallery.patch('/' + id, credentials);
   }
 
   async deleteGallery(id) {

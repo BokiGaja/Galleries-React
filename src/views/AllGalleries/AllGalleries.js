@@ -8,6 +8,7 @@ const allGalleries = props => {
     async function fetchGalleries() {
       await props.onFetchGalleries();
     }
+
     fetchGalleries();
   }, []);
 

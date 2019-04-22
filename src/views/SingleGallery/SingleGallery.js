@@ -18,6 +18,10 @@ const singleGallery = props => {
     props.history.push('/authors/' + props.gallery.user.id)
   };
 
+  const editGallery = () => {
+    props.history.push('/edit-gallery/' + props.gallery.id);
+  };
+
   return (
     <div>
       {props.gallery &&
@@ -33,6 +37,8 @@ const singleGallery = props => {
                  style={{cursor: 'pointer'}}>Author: {props.gallery.user.first_name} {props.gallery.user.last_name}</p>
               <p className="card-text text-muted">{props.gallery.created_at}</p>
             </div>
+            {props.gallery.user_id == props.userId &&
+            <button className="btn btn-primary" onClick={editGallery}>Edit</button>}
           </div>
         </div>
       </div>
@@ -43,7 +49,8 @@ const singleGallery = props => {
 
 const mapStateToProps = state => {
   return {
-    gallery: state.gallery.singleGallery
+    gallery: state.gallery.singleGallery,
+    userId: state.auth.userId
   }
 };
 

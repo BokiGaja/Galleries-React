@@ -1,0 +1,21 @@
+.createPage {
+    margin: auto;
+    text-align: center;
+    background-color: whitesmoke;
+    height: 500px;
+    width: 410px;
+    padding: 20px;
+    border: 3px lightgrey solid;
+    border-radius: 20px;
+    overflow-y: auto;
+}
+
+.createTitle {
+    padding: 20px;
+    font-style: italic;
+    font-family: SansSerif;
+}
+
+.createInput {
+    margin: 10px auto;
+}

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import classes from './App.css';
 import Navigation from './layouts/Navigation/Navigation'
 import {Switch, Route, Redirect} from "react-router"
@@ -17,9 +17,10 @@ class App extends Component {
         <Switch>
           <Route key="authors" path="/authors/:id" component={MyGalleries}/>
           <Route path="/galleries/:id" component={SingleGallery}/>
+          <Route key="editing" path="/edit-gallery/:id" component={NewGallery}/>
           <Route key="user" path="/myGalleries" component={MyGalleries}/>
           <Route path="/allGalleries" component={AllGalleries} exact/>
-          <Route path="/create" component={NewGallery}/>
+          <Route key="creating" path="/create" component={NewGallery}/>
           <Route path="/login" component={Login}/>
           <Route path="/register" component={Register}/>
           <Redirect from="*" to="/allGalleries"/>

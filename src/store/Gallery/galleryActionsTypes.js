@@ -1,3 +1,4 @@
 export const SET_GALLERIES = 'SET_GALLERIES';
 export const SET_SINGLE_GALLERY = 'SET_SINGLE_GALLERY';
+export const ADD_NEW_GALLERY = 'ADD_NEW_GALLERY';
 
