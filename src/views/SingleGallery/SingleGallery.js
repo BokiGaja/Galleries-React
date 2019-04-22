@@ -46,7 +46,7 @@ const singleGallery = props => {
             </div>
             {props.gallery.user_id == props.userId &&
             <div>
-              <button className="btn btn-primary" onClick={editGallery}>Edit</button>
+              <button className="btn btn-primary" onClick={editGallery} style={{marginRight: '10px'}}>Edit</button>
               <button className="btn btn-danger" onClick={deleteGallery}>Delete</button>
             </div>}
           </div>
