@@ -27,7 +27,7 @@ const app = props => (
       <Redirect from="*" to="/allGalleries"/>
     </Switch>
   </div>
-)
+);
 
 const mapStateToProps = state => {
   return {
