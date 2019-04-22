@@ -5,6 +5,7 @@ import PicturesCarousel from '../../components/PicturesCarousel'
 import {connect} from "react-redux";
 import * as actions from '../../store/Gallery/indexActions'
 import {galleryService} from "../../services/GalleryService";
+import Comments from '../../components/Comments/Comments'
 
 const singleGallery = props => {
   useEffect(() => {
@@ -44,11 +45,12 @@ const singleGallery = props => {
               <p className="card-text text-muted">{props.gallery.created_at}</p>
             </div>
             {props.gallery.user_id == props.userId &&
-              <div>
-            <button className="btn btn-primary" onClick={editGallery}>Edit</button>
-                <button className="btn btn-danger"onClick={deleteGallery}>Delete</button>
-              </div>}
+            <div>
+              <button className="btn btn-primary" onClick={editGallery}>Edit</button>
+              <button className="btn btn-danger" onClick={deleteGallery}>Delete</button>
+            </div>}
           </div>
+          <Comments galleryId={props.gallery.id}/>
         </div>
       </div>
       }
