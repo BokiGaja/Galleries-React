@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99b99c7f-b413-409a-bce3-e3278eb6f179" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/NewGallery/NewGallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/NewGallery/NewGallery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/SingleGallery/SingleGallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SingleGallery/SingleGallery.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,10 +16,13 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/views/NewGallery/NewGallery.js">
+        <entry file="file://$PROJECT_DIR$/src/views/SingleGallery/SingleGallery.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="87" column="22" lean-forward="true" selection-start-line="87" selection-start-column="22" selection-end-line="87" selection-end-column="22" />
+            <state relative-caret-position="425">
+              <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -85,10 +87,10 @@
         <option value="$PROJECT_DIR$/src/components/GalleryCard/GalleryListCard/GalleryListCard.js" />
         <option value="$PROJECT_DIR$/src/store/Gallery/galleryActions.js" />
         <option value="$PROJECT_DIR$/src/views/AllGalleries/AllGalleries.js" />
-        <option value="$PROJECT_DIR$/src/views/SingleGallery/SingleGallery.js" />
         <option value="$PROJECT_DIR$/src/services/GalleryService.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/views/NewGallery/NewGallery.js" />
+        <option value="$PROJECT_DIR$/src/views/SingleGallery/SingleGallery.js" />
       </list>
     </option>
   </component>
@@ -129,7 +131,7 @@
               <item name="react-gallery" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="AllGalleries" type="462c0819:PsiDirectoryNode" />
+              <item name="SingleGallery" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -192,12 +194,12 @@
       <workItem from="1555690925928" duration="1564000" />
       <workItem from="1555754468558" duration="56000" />
       <workItem from="1555792847189" duration="47000" />
-      <workItem from="1555844781189" duration="24205000" />
+      <workItem from="1555844781189" duration="24541000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39776000" />
+    <option name="totallyTimeSpent" value="40112000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1055" extended-state="7" />
@@ -468,16 +470,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/SingleGallery/SingleGallery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="18" column="4" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/store/Gallery/galleryActions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="59">
@@ -544,8 +536,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/NewGallery/NewGallery.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="87" column="22" lean-forward="true" selection-start-line="87" selection-start-column="22" selection-end-line="87" selection-end-column="22" />
+        <state relative-caret-position="305">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/SingleGallery/SingleGallery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

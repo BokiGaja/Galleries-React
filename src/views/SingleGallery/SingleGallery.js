@@ -4,6 +4,7 @@ import {withRouter} from "react-router";
 import PicturesCarousel from '../../components/PicturesCarousel'
 import {connect} from "react-redux";
 import * as actions from '../../store/Gallery/indexActions'
+import {galleryService} from "../../services/GalleryService";
 
 const singleGallery = props => {
   useEffect(() => {
@@ -22,6 +23,11 @@ const singleGallery = props => {
     props.history.push('/edit-gallery/' + props.gallery.id);
   };
 
+  const deleteGallery = async () => {
+    await galleryService.deleteGallery(props.gallery.id);
+    props.history.push('/myGalleries')
+  };
+
   return (
     <div>
       {props.gallery &&
@@ -38,7 +44,10 @@ const singleGallery = props => {
               <p className="card-text text-muted">{props.gallery.created_at}</p>
             </div>
             {props.gallery.user_id == props.userId &&
-            <button className="btn btn-primary" onClick={editGallery}>Edit</button>}
+              <div>
+            <button className="btn btn-primary" onClick={editGallery}>Edit</button>
+                <button className="btn btn-danger"onClick={deleteGallery}>Delete</button>
+              </div>}
           </div>
         </div>
       </div>
