@@ -15,7 +15,7 @@ const galleryForm = props => {
   const [images, setImages] = useState(props.match.params.id ? props.gallery.pictures.map(picture => picture.imageUrl) : ['']);
 
   useEffect(() => {
-    if (props.gallery.user.id !== props.userId) {
+    if (props.gallery.user.id != props.userId) {
       props.history.push('/myGalleries')
     }
   },[props.match.params.id]);
