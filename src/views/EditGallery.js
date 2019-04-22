@@ -21,7 +21,7 @@ const editGallery = props => {
   const editGallery = async credentials => {
     try {
       await galleryService.editGallery(props.gallery.id, credentials);
-      props.history.push('/myGalleries')
+      props.history.push('/galleries/'+props.gallery.id)
     } catch (e) {
       setInputError(e.response.data.error)
     }
