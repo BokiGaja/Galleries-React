@@ -83,9 +83,9 @@ const newGallery = props => {
     event.preventDefault();
     const data = {...galleryData, images: images};
     if (!editing) {
-      galleryService.createGallery(data)
+      galleryService.createGallery({...data, user_id: props.userId})
         .then(res => {
-          props.onCreateNewGallery(data);
+          props.onCreateNewGallery({...data, user_id: props.userId});
           props.history.push('/myGalleries')
         })
         .catch(error =>
