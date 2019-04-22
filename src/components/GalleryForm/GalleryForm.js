@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import classes from "./GalleryForm.css";
 import {connect} from "react-redux";
 import {withRouter} from "react-router";
@@ -13,6 +13,12 @@ const galleryForm = props => {
   );
 
   const [images, setImages] = useState(props.match.params.id ? props.gallery.pictures.map(picture => picture.imageUrl) : ['']);
+
+  useEffect(() => {
+    if (props.gallery.user.id !== props.userId) {
+      props.history.push('/myGalleries')
+    }
+  },[props.match.params.id]);
 
   const goBack = () => {
     props.history.push('/myGalleries')
